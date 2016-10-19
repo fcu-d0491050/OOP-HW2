@@ -12,8 +12,19 @@ public class StringComparator {
 		System.out.println("Enter a string2:");
 		B = Letter.nextLine();
 		
-		if(A.equalsIgnoreCase(B))
-		System.out.println("The two strings are the same.");
-		else System.out.printf("The two strings are not the same.");
+		while(!A.equalsIgnoreCase(B))
+		{
+			System.out.printf("The two strings are not the same.\n");
+			System.out.println("Enter a string1:");
+			A = Letter.nextLine();
+			System.out.println("Enter a string2:");
+			B = Letter.nextLine();
+			continue;
 		}
+		
+		if(A.equalsIgnoreCase(B)){
+		System.out.println("The two strings are the same.");
+		Letter.close();
+		}
+	}
 }
